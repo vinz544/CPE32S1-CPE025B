@@ -1,0 +1,139 @@
+<html DOCTYPE!>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgba(192, 152, 104, 0.918);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .description {
+            display: flex;
+            align-items: center;
+            flex-direction:column;
+            padding:0;
+            margin:0;
+        }
+        .heading {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .first_container{
+            border-radius: 20px;
+            padding: 20px;
+            margin: 3% 10%;
+            background-color: bisque;
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            font-weight: bold;
+        }
+        div {
+            padding: 0.5%;
+        }
+
+        .select_container {
+            border-radius: 20px;
+            padding: 20px;
+            margin: 3% 10%;
+            background-color: bisque;
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            font-weight: bold;
+        }
+
+        h2 {
+            align-self: center;
+        }
+
+        textarea{
+            border-radius: 10px;
+            align-self:center;
+        }
+
+        .submit{
+            border-radius: 10px;
+            align-self: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="heading">
+    <h1 id="title">Barista's 5★ Coffee Shop Survey</h1>
+    <p id="description"><b>A humble coffee shop that produces 5★ quality coffee that is affordable for Filipinos
+    <br>Get a taste of new and freshly prepped ideas to add variety to our menus!</b></p>
+    </header>
+
+    <form id="survey-form" action="/submit" method="POST">
+        <div class="first_container">
+        <h2>Basic Customer Information</h2>
+        <div class="name_container">
+        <label id="name-label" for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required>
+        </div>
+        <div class="email_container">
+        <label id="email-label" for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required>
+        </div>
+        <div class="number_container">
+        <label id="number-label" for="number">Age</label>
+        <input
+            type="number"
+            id="number"
+            name="number"
+            min="18"
+            max="70"
+            placeholder="Age"
+            required>
+        </div>
+    </div>
+
+        <div class="select_container">
+            <h2>New Coffee and Pastry Suggestions!</h2>
+            <div class="coffee_container">
+                <p>Coffee Flavors</p>
+                <label for="dropdown" name="level"></label>
+                <select>
+                    <option value="">Select an option</option>
+                    <option value="">Iced Latte</option>
+                    <option value="">Mocha Latte</option>
+                    <option value="">Chocolate Frappe</option>
+                </select>
+            </div>
+            <div class="pastr_container">
+                <p>Pastry Flavors</p>
+                <label for="dropdown" name="level"></label>
+                <select>
+                    <option value="">Select an option</option>
+                    <option value="">Short Cake</option>
+                    <option value="">Chocolate Cake</option>
+                    <option value="">Fruit Cake</option>
+                </select>
+            </div>
+            <div>
+                <p>Suggestions</p>
+                <textarea>Add your suggestions!</textarea>
+            </div>
+            <button id="submit"><input type="submit"></button>
+        </div>
+    </form>
+</body>
+</html>
